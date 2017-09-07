@@ -46,7 +46,7 @@ public class InferenceTest {
 
 		printIndividualStatements(inf);
 
-		removeIndividualStatementToModel(inf);
+		removeIndividualStatementInModel(inf);
 
 		inf.rebind();
 		inf.reset();
@@ -78,7 +78,7 @@ public class InferenceTest {
 		m.add(stmt);
 	}
 
-	private static void removeIndividualStatementToModel(Model m) {
+	private static void removeIndividualStatementInModel(Model m) {
 		LOG.info("---- remove Individual Statements ----");
 		Resource s = m.createResource("http://ontology.tno.nl/2017/7/untitled-ontology-103/indiv");
 		Property p = m.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
